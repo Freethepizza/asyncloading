@@ -1,11 +1,10 @@
-import * as THREE from '../../../vendor/three/build/three.module.js';
+import { PerspectiveCamera } from 'https://cdn.skypack.dev/three@0.132.2';
 
 function createCamera() {
-  const width = window.innerWidth/32;
-  const height = window.innerHeight/32;
-  const camera = new THREE.OrthographicCamera(-width,width,height, -height, .1, 2000);
-  camera.position.set(-2.5,20,40);
-  
+  const camera = new PerspectiveCamera(35, 1, 0.1, 100);
+
+  camera.position.set(-1.5, 1.5, 6.5);
+
   return camera;
 }
 

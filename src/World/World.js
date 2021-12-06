@@ -1,4 +1,4 @@
-import { loadAssets } from './components/assets/assets.js';
+import { loadBirds } from './components/birds/birds.js';
 import { createCamera } from './components/camera.js';
 import { createLights } from './components/lights.js';
 import { createScene } from './components/scene.js';
@@ -32,10 +32,12 @@ class World {
   }
 
   async init() {
-    const { kitchen, burger} = await loadAssets();
-    scene.add(kitchen,burger);
-    console.log(kitchen);
-    console.log(burger)
+    const { kitchen, burger, skater, rapper, muppie, gamer, chef } = await loadBirds();
+
+    // move the target to the center of the front bird
+    //controls.target.copy(parrot.position);
+
+    scene.add(kitchen, burger, skater, rapper, muppie, gamer, chef);
   }
 
   render() {
@@ -44,8 +46,6 @@ class World {
 
   start() {
     loop.start();
-    
-    
   }
 
   stop() {
