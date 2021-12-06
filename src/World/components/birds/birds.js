@@ -6,13 +6,13 @@ async function loadBirds() {
   const loader = new GLTFLoader();
 
   const [kitchenData, burgerData, skaterData, rapperData, muppieData, gamerData, chefData] = await Promise.all([
-    loader.loadAsync('./assets/models/kitchen.glb'),
-    loader.loadAsync('./assets/models/burger.glb'),
-    loader.loadAsync('./assets/models/skater.glb'),
-    loader.loadAsync('./assets/models/rapper.glb'),
-    loader.loadAsync('./assets/models/muppie.glb'),
-    loader.loadAsync('./assets/models/gamer.glb'),
-    loader.loadAsync('./assets/models/chef.glb'),
+    loader.loadAsync('./assets/kitchen.glb'),
+    loader.loadAsync('./assets/burger.glb'),
+    loader.loadAsync('./assets/skater.glb'),
+    loader.loadAsync('./assets/rapper.glb'),
+    loader.loadAsync('./assets/muppie.glb'),
+    loader.loadAsync('./assets/gamer.glb'),
+    loader.loadAsync('./assets/chef.glb'),
 
   ]);
 
